@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Management</title>
+    <script>
+    // Add this script to handle the member statement retrieval
+    function getMemberStatement() {
+        var memberId = document.getElementById('member_id_input').value;
+        window.location.href = '/member-statement/' + memberId;
+    }
+    </script>
+</head>
+<body>
+    <h1>Club Management System</h1>
+    <form action="/register" method="post">
+        <input type="text" name="name" placeholder="Enter your name" required>
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <button type="submit">Register</button>
+    </form>
+    <form action="/pay" method="post">
+        <input type="number" name="member_id" placeholder="Enter your member ID" required>
+        <input type="number" name="amount" placeholder="Enter amount" required>
+        <button type="submit">Pay</button>
+    </form>
+    <!-- Notice we have removed the action attribute from this form -->
+    <form onsubmit="getMemberStatement(); return false;">
+        <input id="member_id_input" type="number" name="member_id" placeholder="Enter Member ID" required>
+        <button type="submit">Get Member Statement</button>
+    </form>
+    <form action="/club-finances" method="get">
+        <button type="submit">View Club Finances</button>
+    </form>
+</body>
+</html>
