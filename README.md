@@ -36,7 +36,6 @@ Built using **Python (Flask framework)** and **HTML/CSS**, this project emphasiz
 ---
 ## 🚀 How to Run Locally
 
-```bash
 # Navigate to the project folder:
 cd ClubManagementSystem
 
@@ -51,6 +50,8 @@ pip install flask
 
 # Run the Flask application:
 python app.py
+
+---
 
 ## 📂 Project Structure
 
